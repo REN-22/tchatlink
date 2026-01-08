@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[52,)" # Forge 1.21.1
+
+license="All Rights Reserved"
+
+[[mods]]
+modId="tchatlink"
+version="5.0"
+displayName="TchatLink"
+authors="REN"
+description='''Mod client-side pour intercepter les messages du chat et piloter Baritone automatiquement.
+
+Commandes supportées :
+- goto <x> <y> <z>
+- stop
+- follow <player>
+'''
+
+[[dependencies.tchatlink]]
+modId="forge"
+mandatory=true
+versionRange="[52.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tchatlink]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
