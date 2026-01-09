@@ -4,7 +4,7 @@
   "package": "com.ren.tchatlink.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "ChatMixin"
+    "ChatPacketMixin"
   ],
   "injectors": {
     "defaultRequire": 1
