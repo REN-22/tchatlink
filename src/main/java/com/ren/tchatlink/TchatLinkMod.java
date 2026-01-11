@@ -14,8 +14,6 @@ public class TchatLinkMod {
     public TchatLinkMod() {
         LOGGER.info("TchatLink chargé !");
 
-        new Debug();
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 }

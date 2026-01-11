@@ -46,14 +46,11 @@ public class PlayerChatMixin {
         if (raw.startsWith("#goto")) return;
         if (raw.contains("Baritone:")) return;
         // ----------------------------
-        System.out.println(raw + "a passé les filtres");
 
         String msg = raw.substring(raw.indexOf("> ") + 1);
-        System.out.println("extrait msg: " + msg);
 
         String[] morceaux = msg.split(" ");
         String commande = morceaux[0];
-        System.out.println("commande parsé: " + commande);
 
         switch (commande) {
             case "goal" -> {
@@ -66,7 +63,6 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                             mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                         } catch (Exception ignored) {}
                         break;
@@ -78,7 +74,6 @@ public class PlayerChatMixin {
                                 var mc2 = net.minecraft.client.Minecraft.getInstance();
                                 mc2.player.connection.sendChat(baritoneCmd2);
 
-                                System.out.println("commande--> " + baritoneCmd2 + "générée depuis --> " + raw);
                                 mc2.player.sendSystemMessage(Component.literal(baritoneCmd2));
                             } catch (Exception ignored) {}
                             break;
@@ -90,7 +85,6 @@ public class PlayerChatMixin {
                             var mc2 = net.minecraft.client.Minecraft.getInstance();
                             mc2.player.connection.sendChat(baritoneCmd2);
 
-                            System.out.println("commande--> " + baritoneCmd2 + "générée depuis --> " + raw);
                             mc2.player.sendSystemMessage(Component.literal(baritoneCmd2));
                             } catch (Exception ignored) {}
                             break;
@@ -105,7 +99,6 @@ public class PlayerChatMixin {
                             var mc3 = net.minecraft.client.Minecraft.getInstance();
                             mc3.player.connection.sendChat(baritoneCmd3);
 
-                            System.out.println("commande--> " + baritoneCmd3 + "générée depuis --> " + raw);
                             mc3.player.sendSystemMessage(Component.literal(baritoneCmd3));
                         } catch (Exception ignored) {}
                         break;
@@ -119,7 +112,6 @@ public class PlayerChatMixin {
                             var mc4 = net.minecraft.client.Minecraft.getInstance();
                             mc4.player.connection.sendChat(baritoneCmd4);
 
-                            System.out.println("commande--> " + baritoneCmd4 + "générée depuis --> " + raw);
                             mc4.player.sendSystemMessage(Component.literal(baritoneCmd4));
                         } catch (Exception ignored) {}
                         break;
@@ -130,12 +122,10 @@ public class PlayerChatMixin {
             }
 
             case "goto" -> {
-                System.out.println("Commande goto détectée");
                 try {
                     String[] args = msg.split(" ");
                     if (args.length != 4) return;
 
-                    System.out.println("args détectés: " + args[1] + " " + args[2] + " " + args[3]);
 
                     double x = Double.parseDouble(args[1]);
                     double y = Double.parseDouble(args[2]);
@@ -146,56 +136,48 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "path" -> {
-                System.out.println("Commande path détectée");
                 try {
                     String baritoneCmd = "#path";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "forcecancel" -> {
-                System.out.println("Commande forcecancel détectée");
                 try {
                     String baritoneCmd = "#forcecancel";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "invert" -> {
-                System.out.println("Commande invert détectée");
                 try {
                     String baritoneCmd = "#invert";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "tunnel" -> {
-                System.out.println("Commande tunnel détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length == 1) {
@@ -205,7 +187,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 } else if (args.length == 4) {
@@ -219,7 +200,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 };
@@ -227,7 +207,6 @@ public class PlayerChatMixin {
             }
 
             case "farm" -> {
-                System.out.println("Commande farm détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length == 1) {
@@ -237,7 +216,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 } else if (args.length == 2) {
@@ -249,7 +227,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 } else if (args.length == 3) {
@@ -262,7 +239,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 };
@@ -270,17 +246,7 @@ public class PlayerChatMixin {
             }
 
             case "follow" -> {
-                System.out.println("Commande follow détectée");
                 String[] args = msg.split(" ");
-
-                System.out.println("mode détecté >" + args[1] +"<");
-
-                if (args[1].equals("entities") || args[1].equals("entity") || args[1].equals("player")) {
-                    System.out.println("args bien détectés: " + args[1]);
-                } else {
-                    System.out.println("args mal détectés");
-                    break;
-                }
                 switch (args[1]) {
                     case "entities":
                         try {
@@ -289,7 +255,6 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                             mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                         } catch (Exception ignored) {}
                         break;
@@ -302,7 +267,6 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                             mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                         } catch (Exception ignored) {}
 
@@ -314,7 +278,6 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                             mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                         } catch (Exception ignored) {}
                         break;
@@ -325,21 +288,18 @@ public class PlayerChatMixin {
             }
 
             case "stop" -> {
-                System.out.println("Commande stop détectée");
                 try {
                     String baritoneCmd = "#stop";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "pickup" -> {
-                System.out.println("Commande pickup détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length == 1) {
@@ -349,7 +309,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 } else if (args.length > 1) {
@@ -365,7 +324,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
 
@@ -374,7 +332,6 @@ public class PlayerChatMixin {
             }
 
             case "explore" -> {
-                System.out.println("Commande explore détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length == 1) {
@@ -384,7 +341,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                     break;
@@ -398,7 +354,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                 }
@@ -406,7 +361,6 @@ public class PlayerChatMixin {
             }
 
             case "find" -> {
-                System.out.println("Commande find détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length != 2) break;
@@ -418,14 +372,12 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "mine" -> {
-                System.out.println("Commande mine détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length != 2) break;
@@ -437,42 +389,36 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             // case "click" -> {
-            //     System.out.println("Commande click détectée");
             //     try {
             //         String baritoneCmd = "#click";
 
             //         var mc = net.minecraft.client.Minecraft.getInstance();
             //         mc.player.connection.sendChat(baritoneCmd);
 
-            //         System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
             //         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
             //     } catch (Exception ignored) {}
             //     break;
             // }
 
             case "surface" -> {
-                System.out.println("Commande surface détectée");
                 try {
                     String baritoneCmd = "#surface";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "thisway" -> {
-                System.out.println("Commande thisway détectée");
                 String[] args = msg.split(" ");
 
                 try {
@@ -483,14 +429,12 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "wp", "waypoint", "waypoints" -> {
-                System.out.println("Commande waypoint détectée");
                 String[] args = msg.split(" ");
 
                 try {
@@ -602,35 +546,30 @@ public class PlayerChatMixin {
             }
 
             case "sethome" -> {
-                System.out.println("Commande sethome détectée");
                 try {
                     String baritoneCmd = "#sethome";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "home" -> {
-                System.out.println("Commande home détectée");
                 try {
                     String baritoneCmd = "#home";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "elytra" -> {
-                System.out.println("Commande elytra détectée");
                 String[] args = msg.split(" ");
 
                 if (args.length == 1) {
@@ -640,7 +579,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                     break;
@@ -653,7 +591,6 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
                     break;
@@ -662,42 +599,36 @@ public class PlayerChatMixin {
             }
 
             case "pause" -> {
-                System.out.println("Commande pause détectée");
                 try {
                     String baritoneCmd = "#pause";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "resume" -> {
-                System.out.println("Commande resume détectée");
                 try {
                     String baritoneCmd = "#resume";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
             }
 
             case "cancel" -> {
-                System.out.println("Commande cancel détectée");
                 try {
                     String baritoneCmd = "#cancel";
 
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    System.out.println("commande--> " + baritoneCmd + "générée depuis --> " + raw);
                     mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                 } catch (Exception ignored) {}
                 break;
