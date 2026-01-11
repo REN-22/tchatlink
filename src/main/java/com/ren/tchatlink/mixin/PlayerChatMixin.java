@@ -119,7 +119,6 @@ public class PlayerChatMixin {
                     default:
                         break;
                 }
-                break;
             }
 
             case "goto" -> {
@@ -190,6 +189,7 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 } else if (args.length == 4) {
                     try {
                         int height = Integer.parseInt(args[1]);
@@ -203,8 +203,8 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 };
-                break;
             }
 
             case "farm" -> {
@@ -219,6 +219,7 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 } else if (args.length == 2) {
                     try {
                         int range = Integer.parseInt(args[1]);
@@ -230,6 +231,7 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 } else if (args.length == 3) {
                     try {
                         int range = Integer.parseInt(args[1]);
@@ -242,8 +244,8 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 };
-                break;
             }
 
             case "follow" -> {
@@ -270,6 +272,7 @@ public class PlayerChatMixin {
 
                             mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                         } catch (Exception ignored) {}
+                        break;
 
                     case "player":
                         try {
@@ -285,7 +288,6 @@ public class PlayerChatMixin {
                     default:
                         break;
                 }
-                break;
             }
 
             case "stop" -> {
@@ -312,6 +314,7 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 } else if (args.length > 1) {
                     String itemNames = args[1];
                     if (args.length > 2) {
@@ -327,9 +330,8 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
-
+                    break;
                 };
-                break;
             }
 
             case "explore" -> {
@@ -357,8 +359,8 @@ public class PlayerChatMixin {
 
                         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
                     } catch (Exception ignored) {}
+                    break;
                 }
-                break;
             }
 
             case "find" -> {
@@ -454,59 +456,74 @@ public class PlayerChatMixin {
 
                         // --- LIST / L ---
                         case "l", "list" -> {
-                            String baritoneCmd = (args.length == 2)
-                                    ? "#wp list"
-                                    : "#wp list " + args[2];
+                            try {
+                                String baritoneCmd = (args.length == 2)
+                                        ? "#wp list"
+                                        : "#wp list " + args[2];
 
-                            mc.player.connection.sendChat(baritoneCmd);
-                            mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                mc.player.connection.sendChat(baritoneCmd);
+                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                            } catch (Exception ignored) {}
+                            break;
                         }
 
                         // --- SAVE / S ---
                         case "s", "save" -> {
-                            String baritoneCmd;
+                            try {
+                                String baritoneCmd;
 
-                            if (args.length == 2) {
-                                baritoneCmd = "#wp save";
-                            } else if (args.length == 3) {
-                                baritoneCmd = "#wp save " + args[2];
-                            } else if (args.length == 4) {
-                                baritoneCmd = "#wp save " + args[2] + " " + args[3];
-                            } else {
-                                // wp save <tag> <name> <pos...>
-                                String pos = String.join(" ", Arrays.copyOfRange(args, 4, args.length));
-                                baritoneCmd = "#wp save " + args[2] + " " + args[3] + " " + pos;
-                            }
+                                if (args.length == 2) {
+                                    baritoneCmd = "#wp save";
+                                } else if (args.length == 3) {
+                                    baritoneCmd = "#wp save " + args[2];
+                                } else if (args.length == 4) {
+                                    baritoneCmd = "#wp save " + args[2] + " " + args[3];
+                                } else {
+                                    // wp save <tag> <name> <pos...>
+                                    String pos = String.join(" ", Arrays.copyOfRange(args, 4, args.length));
+                                    baritoneCmd = "#wp save " + args[2] + " " + args[3] + " " + pos;
+                                }
 
-                            mc.player.connection.sendChat(baritoneCmd);
-                            mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                mc.player.connection.sendChat(baritoneCmd);
+                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                            } catch (Exception ignored) {}
+                            break;
                         }
 
                         // --- INFO / I / SHOW ---
                         case "i", "info", "show" -> {
-                            if (args.length >= 3) {
-                                String baritoneCmd = "#wp info " + args[2];
-                                mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
-                            }
+                            try {
+                                if (args.length >= 3) {
+                                    String baritoneCmd = "#wp info " + args[2];
+                                    mc.player.connection.sendChat(baritoneCmd);
+                                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                }
+                                } catch (Exception ignored) {}
+                            break;
                         }
 
                         // --- DELETE / D ---
                         case "d", "delete" -> {
-                            if (args.length >= 3) {
-                                String baritoneCmd = "#wp delete " + args[2];
-                                mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
-                            }
+                            try {
+                                if (args.length >= 3) {
+                                    String baritoneCmd = "#wp delete " + args[2];
+                                    mc.player.connection.sendChat(baritoneCmd);
+                                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                }
+                            } catch (Exception ignored) {}
+                            break;
                         }
 
                         // --- RESTORE ---
                         case "restore" -> {
-                            if (args.length >= 3) {
-                                String baritoneCmd = "#wp restore " + args[2];
-                                mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
-                            }
+                            try {
+                                if (args.length >= 3) {
+                                    String baritoneCmd = "#wp restore " + args[2];
+                                    mc.player.connection.sendChat(baritoneCmd);
+                                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                }
+                            } catch (Exception ignored) {}
+                            break;
                         }
 
                         // --- CLEAR / C ---
