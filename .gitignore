@@ -20,6 +20,7 @@ build
 # other
 eclipse
 run
+forge-1.21.1-52.1.0-mdk.zip
 
 # Files from Forge MDK
 forge*changelog.txt
