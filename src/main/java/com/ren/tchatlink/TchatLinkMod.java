@@ -11,7 +11,7 @@ public class TchatLinkMod {
     public static final String MODID = "tchatlink";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public TchatLinkMod() {
+    private TchatLinkMod() {
         LOGGER.info("TchatLink chargé !");
 
         MinecraftForge.EVENT_BUS.register(this);

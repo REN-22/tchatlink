@@ -16,11 +16,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ClientPacketListener.class)
 public class PlayerChatMixin {
     private static final Set<String> processed = new HashSet<>(); 
-    private static long lastCleanup = 0; 
+    private long lastCleanup = 0; 
 
     private void cleanup() { long now = System.currentTimeMillis(); 
         if (now - lastCleanup > 50) { 
-            processed.clear(); lastCleanup = now; 
+            processed.clear(); 
+            lastCleanup = now;
         } 
     }
 
