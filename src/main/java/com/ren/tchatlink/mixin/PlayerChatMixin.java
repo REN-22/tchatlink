@@ -64,7 +64,7 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                            
                         } catch (Exception ignored) {}
                         break;
                     case 2:
@@ -136,7 +136,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -148,7 +148,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -160,7 +160,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -172,7 +172,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -187,7 +187,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 } else if (args.length == 4) {
@@ -201,7 +201,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 };
@@ -217,7 +217,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 } else if (args.length == 2) {
@@ -229,7 +229,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 } else if (args.length == 3) {
@@ -242,7 +242,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 };
@@ -258,7 +258,7 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                            
                         } catch (Exception ignored) {}
                         break;
 
@@ -270,7 +270,7 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                            
                         } catch (Exception ignored) {}
                         break;
 
@@ -282,7 +282,7 @@ public class PlayerChatMixin {
                             var mc = net.minecraft.client.Minecraft.getInstance();
                             mc.player.connection.sendChat(baritoneCmd);
 
-                            mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                            
                         } catch (Exception ignored) {}
                         break;
                     default:
@@ -297,7 +297,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -312,7 +312,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 } else if (args.length > 1) {
@@ -328,7 +328,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 };
@@ -344,7 +344,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 } else if (args.length > 1) {
@@ -357,7 +357,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 }
@@ -375,7 +375,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -392,7 +392,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -404,7 +404,7 @@ public class PlayerChatMixin {
             //         var mc = net.minecraft.client.Minecraft.getInstance();
             //         mc.player.connection.sendChat(baritoneCmd);
 
-            //         mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+            //         
             //     } catch (Exception ignored) {}
             //     break;
             // }
@@ -416,7 +416,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -432,7 +432,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -446,7 +446,7 @@ public class PlayerChatMixin {
                     if (args.length == 1) {
                         String baritoneCmd = "#wp list";
                         mc.player.connection.sendChat(baritoneCmd);
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                         break;
                     }
 
@@ -462,7 +462,7 @@ public class PlayerChatMixin {
                                         : "#wp list " + args[2];
 
                                 mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                
                             } catch (Exception ignored) {}
                             break;
                         }
@@ -485,7 +485,7 @@ public class PlayerChatMixin {
                                 }
 
                                 mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                
                             } catch (Exception ignored) {}
                             break;
                         }
@@ -496,7 +496,7 @@ public class PlayerChatMixin {
                                 if (args.length >= 3) {
                                     String baritoneCmd = "#wp info " + args[2];
                                     mc.player.connection.sendChat(baritoneCmd);
-                                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                    
                                 }
                                 } catch (Exception ignored) {}
                             break;
@@ -508,7 +508,7 @@ public class PlayerChatMixin {
                                 if (args.length >= 3) {
                                     String baritoneCmd = "#wp delete " + args[2];
                                     mc.player.connection.sendChat(baritoneCmd);
-                                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                    
                                 }
                             } catch (Exception ignored) {}
                             break;
@@ -520,7 +520,7 @@ public class PlayerChatMixin {
                                 if (args.length >= 3) {
                                     String baritoneCmd = "#wp restore " + args[2];
                                     mc.player.connection.sendChat(baritoneCmd);
-                                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                    
                                 }
                             } catch (Exception ignored) {}
                             break;
@@ -531,7 +531,7 @@ public class PlayerChatMixin {
                             if (args.length >= 3) {
                                 String baritoneCmd = "#wp clear " + args[2];
                                 mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                
                             }
                         }
 
@@ -540,7 +540,7 @@ public class PlayerChatMixin {
                             if (args.length >= 3) {
                                 String baritoneCmd = "#wp goal " + args[2];
                                 mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                
                             }
                         }
 
@@ -549,7 +549,7 @@ public class PlayerChatMixin {
                             if (args.length >= 3) {
                                 String baritoneCmd = "#wp goto " + args[2];
                                 mc.player.connection.sendChat(baritoneCmd);
-                                mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                                
                             }
                         }
 
@@ -570,7 +570,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -582,7 +582,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -597,7 +597,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 } else if (args.length == 2) {
@@ -609,7 +609,7 @@ public class PlayerChatMixin {
                         var mc = net.minecraft.client.Minecraft.getInstance();
                         mc.player.connection.sendChat(baritoneCmd);
 
-                        mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                        
                     } catch (Exception ignored) {}
                     break;
                 }
@@ -623,7 +623,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -635,7 +635,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
@@ -647,7 +647,7 @@ public class PlayerChatMixin {
                     var mc = net.minecraft.client.Minecraft.getInstance();
                     mc.player.connection.sendChat(baritoneCmd);
 
-                    mc.player.sendSystemMessage(Component.literal(baritoneCmd));
+                    
                 } catch (Exception ignored) {}
                 break;
             }
